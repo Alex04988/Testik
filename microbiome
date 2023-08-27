@@ -1,0 +1,3937 @@
+{
+	"info": {
+		"_postman_id": "9e0c7752-ffff-4949-9182-4e0a4afb9cbd",
+		"name": "Microbiome_PA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26769870"
+	},
+	"item": [
+		{
+			"name": "{{host}}/api2/login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"x-access-token\", jsonData.data.token);",
+							"",
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "X-Access-Locale",
+						"value": "ru"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"login\":\"microbiome@atlas.ru\",\"password\":\"microbiome\",\"remember\":true}"
+				},
+				"url": {
+					"raw": "{{host}}/api2/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api2",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/nutrition/fibers/brief",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/nutrition/fibers/brief",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"nutrition",
+						"fibers",
+						"brief"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/anti-inflammatory/bacteria?page=1&potential=increase",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/anti-inflammatory/bacteria?page=1&potential=increase",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"anti-inflammatory",
+						"bacteria"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "potential",
+							"value": "increase"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/butyrate/facts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/butyrate/facts",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"butyrate",
+						"facts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/probiotics",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/probiotics",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"probiotics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/sport/brief",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/sport/brief",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"sport",
+						"brief"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/risk/ids",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"ids\":[\"ulcerativeColitis\",\"crohnsDisease\",\"coronaryHeartDisease\",\"type2DiabetesMellitus\",\"obesity\"]}"
+				},
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/risk/ids",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"risk",
+						"ids"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/nutrition/vitamin/random?count=1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/nutrition/vitamin/random?count=1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"nutrition",
+						"vitamin",
+						"random"
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/nutrition/butyrate/brief",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/nutrition/butyrate/brief",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"nutrition",
+						"butyrate",
+						"brief"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/account/icons/close.svg",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/icons/close.svg",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"icons",
+						"close.svg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/account/localization/ru/dictionary.json",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/localization/ru/dictionary.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"localization",
+						"ru",
+						"dictionary.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api2/public/userId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "X-Access-Token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api2/public/userId",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api2",
+						"public",
+						"userId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/butyrate/synthesis-potential-history",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/butyrate/synthesis-potential-history",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"butyrate",
+						"synthesis-potential-history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/nutrition/brief",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/nutrition/brief",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"nutrition",
+						"brief"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/user/profile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "atlas-enable-text-formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/user/profile",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/multifactorial-risks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/multifactorial-risks",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"multifactorial-risks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/account/icons/close.svg",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/icons/close.svg",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"icons",
+						"close.svg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/recommendations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/recommendations",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"recommendations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/reports/microbiome-health",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "atlas-enable-text-formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/reports/microbiome-health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"reports",
+						"microbiome-health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/avatar/list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/avatar/list",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"avatar",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/nutrition/diversity/brief",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/nutrition/diversity/brief",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"nutrition",
+						"diversity",
+						"brief"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/microbiome-diversity",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/microbiome-diversity",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"microbiome-diversity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/account/icons/barcode.svg",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/icons/barcode.svg",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"icons",
+						"barcode.svg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/auth/assets/views/auth/login.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "X-Access-Locale",
+						"value": "ru"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/auth/assets/views/auth/login.html",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"auth",
+						"assets",
+						"views",
+						"auth",
+						"login.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/nutrition/enterotype/brief",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/nutrition/enterotype/brief",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"nutrition",
+						"enterotype",
+						"brief"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "document"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "navigate"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-User",
+						"value": "?1"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/navigation/health",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "atlas-enable-text-formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/navigation/health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"navigation",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/probiotics/score-history",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/probiotics/score-history",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"probiotics",
+						"score-history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/butyrate/bacteria?page=1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/butyrate/bacteria?page=1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"butyrate",
+						"bacteria"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/user/flags",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/user/flags",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"user",
+						"flags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/anti-inflammatory",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/anti-inflammatory",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"anti-inflammatory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/microbiome-diversity/facts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/microbiome-diversity/facts",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"microbiome-diversity",
+						"facts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/butyrate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/butyrate",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"butyrate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/microbiome-diversity/score-history",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/microbiome-diversity/score-history",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"microbiome-diversity",
+						"score-history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/nutrition/probiotics/brief",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/nutrition/probiotics/brief",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"nutrition",
+						"probiotics",
+						"brief"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/source/list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/source/list",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"source",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/anti-inflammatory/microbiome-chronology",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/anti-inflammatory/microbiome-chronology",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"anti-inflammatory",
+						"microbiome-chronology"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/source/brief",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "atlas-enable-text-formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/source/brief",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"source",
+						"brief"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/auth/login?redirect_url=/account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "document"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "navigate"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/auth/login?redirect_url=/account",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "redirect_url",
+							"value": "/account"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/ancestry/brief",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/ancestry/brief",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"ancestry",
+						"brief"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/probiotics/facts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/probiotics/facts",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"probiotics",
+						"facts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "document"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "navigate"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-User",
+						"value": "?1"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/results/gut-microbiome/anti-inflammatory/bacteria?page=1&potential=decrease",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "Atlas-Enable-Text-Formatting",
+						"value": "true"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/results/gut-microbiome/anti-inflammatory/bacteria?page=1&potential=decrease",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"results",
+						"gut-microbiome",
+						"anti-inflammatory",
+						"bacteria"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "potential",
+							"value": "decrease"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/product/top/list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/product/top/list",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"product",
+						"top",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/ancestry/list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/ancestry/list",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"ancestry",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/account/v1/legacy/product/top/list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "x-access-token",
+						"value": "$2y$08$fdVhOyDGLFcuMXDP4Ye1rOBdrdUfLfSiJLnQ708HKP9BPJSRCNSSO"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/account/v1/legacy/product/top/list",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"v1",
+						"legacy",
+						"product",
+						"top",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/account/icons/close.svg",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/icons/close.svg",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"icons",
+						"close.svg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/account/icons/africa.svg",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"OK\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "atlas.ru"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/icons/africa.svg",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"icons",
+						"africa.svg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
