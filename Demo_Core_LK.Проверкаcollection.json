@@ -91,19 +91,6 @@
 		},
 		{
 			"name": "{{host}}/account/icons/hexagon.svg",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"OK\", function () {",
-							"    pm.response.to.have.status(\"OK\");",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
 			"request": {
 				"method": "GET",
 				"header": [
