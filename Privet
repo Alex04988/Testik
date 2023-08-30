@@ -1,3 +1,4 @@
 {
-   "Privet": "Chao Sancho"
+   "Privet": ["Chao Sancho"
+            {"code":"Hi"}
 }
