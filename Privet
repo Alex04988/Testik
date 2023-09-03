@@ -1,6 +1,8 @@
 {
    "Privet": [{"Chao Sancho",
             "code":"Hi"
-		"color":"Yellow"}
+		"color":"Yellow"
+		"color": "Red"
+}
       ]
 }
